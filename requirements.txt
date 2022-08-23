@@ -1,0 +1,2 @@
+pymorphy2~=0.9.1
+pyTelegrambotAPI~=4.7.0

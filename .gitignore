@@ -1,3 +1,5 @@
 __pychache__
 *.pyc
 .idea
+config.py
+words.db
