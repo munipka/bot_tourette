@@ -1,12 +1,13 @@
-import mysql.connector
+import sqlite3
+
 
 class UseDatabase:
-    
-    def __init__(self, config:dict):
-        self.configuration = config
+
+    def __init__(self, dbpath: str):
+        self.path = dbpath
 
     def __enter__(self) -> 'cursor':
-        self.conn = mysql.connector.connect(**self.configuration)
+        self.conn = sqlite3.connect(self.path)
         self.cursor = self.conn.cursor()
         return self.cursor
 
